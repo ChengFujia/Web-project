@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+	<!-- jQuery 文件（务必在 bootstrap.min.css 之前导入） -->
+	<script="http://cdn.bootcss.com/jQuery/1.11.1/jQuery.min.css"></script>
+	<!-- 新 Bootstrap 核心 JavaScript 文件 -->
+	<script="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.css"></script>	
+	<style>
+	.form-signin
+	{
+		max-width:330px;
+		padding:0 15px;
+		margin: 0 auto;
+	}
+	.form-signin ,form-control
+	{
+		height: auto;
+		padding:10px;
+		box-sizing:border-box;
+		font-size:12px;
+		border-radius:2px;
+	}
+	.account-wall
+	{
+		padding:40px 0 20px;
+		background-color:#F9F9F9;
+		border:1px solid #D5D5D5;
+		box-shadow:0 0 3px #EEE;
+		-webkit-border-radius:2px;
+		-moz-border-radius:2px;
+		border-radius:2px;
+	}
+	.theme-default .account-wall
+	{
+		background:#F9F9F9;
+	}
+	.theme-light .account-wall
+	{
+		background:#FFF;
+	}
+	.theme-dark .account-wall
+	{
+		background:#FFF;
+	}
+	.theme-transparent .account-wall
+	{
+		background:#444;
+		border:1px solid #FFF;
+	}
+	.account-wall .item
+	{
+		padding-bottom:20px;
+	}
+	.login-title
+	{
+		color:#555;
+		font-size:18px;
+		font-weight:400;
+		display:block;
+		padding:40px 0;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-4 col-md-offset-4 main">
+				<h1 class="text-center login-title">Luosimao 人机验证</h1>
+				<div class="account-wall">
+					<form class="form-signin" action="" method="POST">
+						<div class="item">
+							<input type="text" class="form-control" placeholder="用户名">
+						</div>
+						<div class="item">
+							<input type="password" class="form-control" placeholder="密码">
+						</div>
+						<div class="item">
+							<button class="btn btn-lg btn-primary btn-block" type="submit">立即登陆</button>
+							<div class="item">
+								<div class="l-captcha" data-site-key="4051cd6d6b1917b7ba87de4b49c9eabe">
+								</div>
+							</div>
+							<a class="btn btn-default btn-lg btn-block" oncllick="LUOCAPTCHA.reset()">重置验证</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		<div>
+	</div>
+	<script src="//captcha.luosimao.com/static/js/api.js"></script>
+</body>
+</html>
