@@ -9,11 +9,15 @@
 <html>
 <head>
     <title>ChengFujia</title>
-    <!-- style 添加到head部分的样式信息对HTML进行格式化 -->
+    <!-- style标签 内部样式表 添加到head部分的样式信息 对HTML进行格式化 【适用于某个文件需要特别格式】-->
     <style type="text/css">
         h1 {color:red}
+		body {background-color:blue}
         p {color:blue}
+		p {margin-left:20px}
     </style>
+	<!-- 通过 外部样式表 对文本，如p，h进行格式化 【适用于多个文件/界面需要特别格式】 -->
+	<!-- link rel="stylesheet" type="text/css" href="/html/csstest1.css" -->
 </head>
 
 <!--body 统一用style属性替代bgcolor属性 bgcolor="green" -->
@@ -24,7 +28,14 @@
     <h6>This is my second page</h6>  
     <hr />
     
-    <a href="http://www.baidu.com">Baidu</a>
+	<!-- a 用style属性 内联样式 实现超链接无下划线 【适用于个别元素需要特别格式】 -->
+	<!-- 这里的target=“_blank”用来开启一个新界面，还可设置“_top”跳出框架，类似回到首页 -->
+    <a href="http://www.baidu.com" target="_blank" name="tips">Baidu</a>
+	<!-- name属性或者id属性创建到这个链接的锚，可以在相同或不同文件中利用href="#tips"直接指向这个锚的位置，而不用疯狂滚动 【适用于分章节】-->
+	<a href="#tips" style="text-decoration:none">Baidu</a>
+	<!-- %20表示之间的空格 -->
+	<a href="mailto:someone@microsoft.com?subject=Hello%20again">这是一个邮件链接</a>
+	<!-- 支持在Baidu的位置用一个图片引用代替，从而使用 图像或其他HTML元素 来作链接 -->
     <hr />
     <!--img src="1.img" width="100" height="300" /-->
     <hr />
