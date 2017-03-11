@@ -20,7 +20,7 @@
 	<!-- link rel="stylesheet" type="text/css" href="/html/csstest1.css" -->
 </head>
 
-<!--body 统一用style属性替代bgcolor属性 bgcolor="green" -->
+<!--body 统一用style属性替代bgcolor属性 bgcolor="green" Notes:可以利用background属性插入背景图片-->
 <body style="background-color:PowderBlue;">
     
     <!--h1 统一用style属性替代align属性 align="center">This is my first page</h1-->
@@ -37,7 +37,22 @@
 	<a href="mailto:someone@microsoft.com?subject=Hello%20again">这是一个邮件链接</a>
 	<!-- 支持在Baidu的位置用一个图片引用代替，从而使用 图像或其他HTML元素 来作链接 -->
     <hr />
-    <!--img src="1.img" width="100" height="300" /-->
+	
+	<!-- img 实现插入图片，插入动画和普通图像语法上并无差别 文件夹或者服务器图片并无区别 【这是一个闭标签】 -->
+	<img src="eg_cute.gif" width="50" height="50" / >
+    <img src="http://www.baidu.com/images/1.img" width="100" height="300" / >
+	<!--img 的alt替换文本属性 当无法加载图像时，告知读者他们正在失去信息 -->
+	<img src="boat.gif" alt="Big Boat">
+	<!--img 的align属性 来设置对齐方式的图像 bottom/middle/top或left/right-->
+	<p>图像<img src="eg_cute.gif" align="bottom" />在文本中</p>
+	<p>图像<img src="eg_cute.gif" align="left" />在文本中</p>
+	<!--img 的图像映射 【可供点击区域的图像地图】 ,usemap引用了map元素的属性-->
+	<img src="eg_planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+		<map name="planetmap" id="planetmap">
+			<area shape="circle" coords="180,139,14" href="/images/venus.html" target="_blank" alt="Venus" />
+			<area shape="circle" coords="129,161,10" href="/images/mercur.html" target="_blank" alt="Mercury" />
+			<area shape="rect" coords="0,0,110,260" href="/images/sun.html" target="_blank" alt="Sun" />
+		</map>
     <hr />
     
     <!-- 统一用style属性替代 font标签 -->
