@@ -22,7 +22,10 @@
 
 <!--body 统一用style属性替代bgcolor属性 bgcolor="green" Notes:可以利用background属性插入背景图片-->
 <body style="background-color:PowderBlue;">
-    
+	<!--可通过<div>和<span>将HTML元素组合起来
+		HTML块元素：通常以新行开始/结束，如<h1> <p> <ul> <table> 对应 <div>作为多个元素的容器
+		HTML内联元素: 通常不以新行开始/结束，如<b> <tb> <a> <img> 对应 <span>作为文本的容器 -->
+		
     <!--h1 统一用style属性替代align属性 align="center">This is my first page</h1-->
     <h1 style="text-align:center;">This is my first page</h1>
     <h6>This is my second page</h6>  
@@ -72,6 +75,77 @@
     </pre>
     <hr />  
     
+	<!-- table表格标签，tr表格行，td表格数据 th为表头-->
+	<!-- 1为细标签，8为粗标签，15为很粗的标签 -->
+	<table border="8">
+		<tr>
+			<th>First</th>
+			<!-- 跨越两列 -->
+			<th colspan="2">Second</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>200</td>
+			<td>300</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<!-- 空格占位符 -->
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<br />
+	<!-- 垂直的表头 及 标题 -->
+	<table border="1" cellpadding="10" cellspacing="10" bgcolor="blue">
+		<caption>姓名-对照表</caption>
+		<tr>
+			<!-- 跨越两行 -->
+			<th rowspan="2">姓名</th>
+			<td align="right">程</td>
+			<td align="right">Cheng</td>
+		</tr>
+		<tr>
+			<td>付佳</td>
+			<td>Fujia</td>
+		</tr>
+	</table>
+	<br />
+	<!-- 表格内容是各种各样的，如图像/段落/表格/列表等 -->
+	<!-- frame 表格边框框架 包含box,above,below,hsides,vsides -->
+	<table frame="vsides">
+		<tr>
+			<td bgcolor="green" >
+				<p>第一段</p>
+				<p>第二段</p>
+			</td>
+			<td >
+				<!-- 无序列表 样式有disc,circle,square -->
+				<ul type="circle">
+					<li>苹果</li>
+					<li>橙子</li>
+					<li>香蕉</li>
+				</ul>
+			</td>
+			<td>
+				<!-- 有序列表 样式有A,a,I,i,默认为数字 -->
+				<ol start="10">
+					<li>苹果</li>
+					<li>橙子</li>
+					<li>香蕉</li>
+				</ol>
+			</td>
+			<td>
+				<!-- 自定义列表 dl开始 dt列表项 dd列表项的定义-->
+				<dl>
+					<dt>苹果</dt> <dd>What is Apple</dd>
+					<dt>香蕉</dt> <dd>What is Banana</dd>
+				</dl>
+			</td>
+		</tr>
+	</table>
+	<hr />
+	
     <b>This text is 醒目的</b> <br />
     <strong>This text is strong</strong> <br />
     <big>This text is big</big> <br />
