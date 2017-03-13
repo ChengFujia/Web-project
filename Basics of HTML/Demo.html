@@ -11,26 +11,75 @@
     <title>ChengFujia</title>
     <!-- style标签 内部样式表 添加到head部分的样式信息 对HTML进行格式化 【适用于某个文件需要特别格式】-->
     <style type="text/css">
-        h1 {color:red}
-		body {background-color:blue}
-        p {color:blue}
-		p {margin-left:20px}
+		body {background-color:white;}
+        h2 {color:blue;}
+		p {margin-left:20px;}
+		
+		.cities {
+			background-color:black;
+			color:white;
+			margin:20px;
+			padding:20px;
+			}
+		span.rowred {color:red;}
+		table.lamp {
+			width:100%
+			border:1px solid #d4d4d4;
+			}
+		table.lamp th,td {
+			padding:10px;
+			}
+		table.lamp td {
+			width:40px;
+			}
+		
+		#header {
+			background-color:black;
+			color:white;
+			text-align:center;
+			padding:5px;
+			}
+		#nav {
+			line-height:30px;
+			background-color:#eeeeee;
+			height:300px;
+			width:100px;
+			float:left;
+			padding:5px;
+			}
+		#section {
+			width:350px;
+			float:left;
+			padding:10px;
+			}
+		#footer {
+			background-color:black;
+			color:white;
+			clear:both;
+			text-align:center;
+			padding:5px;
+			}
     </style>
 	<!-- 通过 外部样式表 对文本，如p，h进行格式化 【适用于多个文件/界面需要特别格式】 -->
 	<!-- link rel="stylesheet" type="text/css" href="/html/csstest1.css" -->
 </head>
 
 <!--body 统一用style属性替代bgcolor属性 bgcolor="green" Notes:可以利用background属性插入背景图片-->
-<body style="background-color:PowderBlue;">
+<body style="background-color:white;">
 	<!--可通过<div>和<span>将HTML元素组合起来
 		HTML块元素：通常以新行开始/结束，如<h1> <p> <ul> <table> 对应 <div>作为多个元素的容器
 		HTML内联元素: 通常不以新行开始/结束，如<b> <tb> <a> <img> 对应 <span>作为文本的容器 -->
-		
+	
+	<!-- 为HTML设置类，在head中为类定义CSS样式 && div如前所述，用来分块 -->
+	<div class="cities">
     <!--h1 统一用style属性替代align属性 align="center">This is my first page</h1-->
     <h1 style="text-align:center;">This is my first page</h1>
-    <h6>This is my second page</h6>  
+		<!-- 为HTML行内元素设置类，在head中为行内元素定义CSS样式 && span如前所述，用来行内分块 -->
+    <h6>This is my second <span class="rowred">IMPORTANT</span> page</h6>  
+	</div>
     <hr />
     
+	<div class="cities">
 	<!-- a 用style属性 内联样式 实现超链接无下划线 【适用于个别元素需要特别格式】 -->
 	<!-- 这里的target=“_blank”用来开启一个新界面，还可设置“_top”跳出框架，类似回到首页 -->
     <a href="http://www.baidu.com" target="_blank" name="tips">Baidu</a>
@@ -39,18 +88,19 @@
 	<!-- %20表示之间的空格 -->
 	<a href="mailto:someone@microsoft.com?subject=Hello%20again">这是一个邮件链接</a>
 	<!-- 支持在Baidu的位置用一个图片引用代替，从而使用 图像或其他HTML元素 来作链接 -->
+	</div>
     <hr />
 	
 	<!-- img 实现插入图片，插入动画和普通图像语法上并无差别 文件夹或者服务器图片并无区别 【这是一个闭标签】 -->
-	<img src="eg_cute.gif" width="50" height="50" / >
+	<img src="file://D:/Program Files/Git/Web-project/Basics of HTML/images/eg_cute.gif" width="50" height="50" / >
     <img src="http://www.baidu.com/images/1.img" width="100" height="300" / >
 	<!--img 的alt替换文本属性 当无法加载图像时，告知读者他们正在失去信息 -->
 	<img src="boat.gif" alt="Big Boat">
 	<!--img 的align属性 来设置对齐方式的图像 bottom/middle/top或left/right-->
-	<p>图像<img src="eg_cute.gif" align="bottom" />在文本中</p>
-	<p>图像<img src="eg_cute.gif" align="left" />在文本中</p>
+	<p>图像<img src="images/eg_cute.gif" align="bottom" />在文本中</p>
+	<p>图像<img src="images/eg_cute.gif" align="left" />在文本中</p>
 	<!--img 的图像映射 【可供点击区域的图像地图】 ,usemap引用了map元素的属性-->
-	<img src="eg_planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+	<img src="images/eg_planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
 		<map name="planetmap" id="planetmap">
 			<area shape="circle" coords="180,139,14" href="/images/venus.html" target="_blank" alt="Venus" />
 			<area shape="circle" coords="129,161,10" href="/images/mercur.html" target="_blank" alt="Mercury" />
@@ -77,7 +127,7 @@
     
 	<!-- table表格标签，tr表格行，td表格数据 th为表头-->
 	<!-- 1为细标签，8为粗标签，15为很粗的标签 -->
-	<table border="8">
+	<table border="8" class="lamp">
 		<tr>
 			<th>First</th>
 			<!-- 跨越两列 -->
@@ -190,5 +240,20 @@
     <q>这是短的引用</q>
     <hr />
     
+	<!-- 使用div来进行HTML布局,在CSS中定义id(#) -->
+	<div id="header">
+		<h1>City Gallery</h1>
+	</div>
+	<div id="nav">
+		London<br />
+		Paris<br />
+		Beijing<br />
+	</div>
+	<div id="section">
+		<p>London is the capital city of England. It is the most populous city in the United Kingdom,with a metropolitan area of over 13 million inhabitants.</p>
+	</div>
+	<div id="footer">
+		Copyright:abcd@efg.com
+	</div>
 </body>
 </html>
