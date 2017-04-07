@@ -7,23 +7,6 @@
 <![endif] -->
 
 <html lang="en-US">
-
-<!-- 通过使用框架，可以在同一个浏览器窗口显示不止一个界面 -->
-<!-- 多列， 多行/混合 如下
-<frameset cols = "25%,70%">
-	<frame src = "html/Demo.html">
-	<frame src = "html/Demo.html">
-</frameset>
--->
-<!-- 如果一个框架有可见边框，用户可以拖动边框来改变他的大小：为避免这种情况，可加入noresize="noresize"-->
-<frameset rows = "25%,70%">
-	<frame src = "html/Demo.html" noresize="noresize">
-	<frameset cols = "50%,50%">
-		<frame src = "html/Demo.html">
-		<frame src = "html/Demo.html">
-	</frameset>
-</frameset>
-
 <head>
     <title>ChengFujia</title>
     <!-- style标签 内部样式表 添加到head部分的样式信息 对HTML进行格式化 【适用于某个文件需要特别格式】-->
@@ -274,6 +257,10 @@
 	</div>
 	
 	<!-- 响应式Web设计 RWD（Responsive Web Design）,使能够以可变的尺寸传递网页 除自己定义外还可以利用Bootstrap框架 -->
-	
+	<!-- 通过使用框架，可以在同一个浏览器窗口显示不止一个界面 -->
+	<frameset cols = "25%,70%">
+		<frame src = "/html/Demo.html">
+		<frame src = "/html/Demo.html">
+	</frameset>
 </body>
 </html>
