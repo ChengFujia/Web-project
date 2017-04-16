@@ -15,14 +15,24 @@
 	<frame src = "html/Demo.html">
 </frameset>
 -->
+
 <!-- 如果一个框架有可见边框，用户可以拖动边框来改变他的大小：为避免这种情况，可加入noresize="noresize"-->
-<frameset rows = "25%,70%">
-	<frame src = "html/Demo.html" noresize="noresize">
+<frameset rows = "25%,75%">
+	<frame src = "html/Demo.html" noresize="noresize" />
 	<frameset cols = "50%,50%">
-		<frame src = "html/Demo.html">
-		<frame src = "html/Demo.html">
+		<frame src = "html/Demo.html" />
+		<!-- 跳到页面中指定的一个节，利用<a name="tips">进行标识 -->
+		<frame src = "html/Demo.html#tips" />
 	</frameset>
 </frameset>
+
+<!-- 演示左侧为导航栏，右侧为页面内容案板 
+<frameset cols="120,*">
+    <!-- 前者将后者作为 链接列表 （href标签中的target属性=后者定义中的name属性）
+	<frame src="path1/html_contents.html" />
+	<frame src="path2/html_choose_one.html" name="showframe" />
+</frameset>
+-->
 
 <head>
     <title>ChengFujia</title>
@@ -39,6 +49,7 @@
 			padding:20px;
 			}
 		span.rowred {color:red;}
+		
 		table.lamp {
 			width:100%
 			border:1px solid #d4d4d4;
@@ -83,6 +94,23 @@
 
 <!--body 统一用style属性替代bgcolor属性 bgcolor="green" Notes:可以利用background属性插入背景图片-->
 <body style="background-color:white;">
+    
+	<!-- 背景相关属性，但是在HTML4和XHTML中已被废弃 
+	三种不同方式，但都是将背景设置为黑色
+	<body bgcolor="#000000">
+	<body bgcolor="rgb(0,0,0)">
+	<body bgcolor="black">
+	将背景设置为图片，可用相对地址，也可用绝对地址;若图片大小不够，会复制多个来铺满画面
+	<body background = "clouds.gif">
+	<body background = "http://www.w3school.com.cn/clouds.gif">
+	-->
+	
+	<!-- 演示如何创建内联框架 页面内的框架/网页中的网页 -->
+	<!-- 可设置窗口的大小，也可以利用百分比设置；是否显示iframe周围的边框 -->
+    <iframe src="html/Demo.html" width="200" height="200" frameborder="0"></iframe>
+	<p>一些老的浏览器不支持 iframe.</p>
+	<hr />
+	
 	<!--可通过<div>和<span>将HTML元素组合起来
 		HTML块元素：通常以新行开始/结束，如<h1> <p> <ul> <table> 对应 <div>作为多个元素的容器
 		HTML内联元素: 通常不以新行开始/结束，如<b> <tb> <a> <img> 对应 <span>作为文本的容器 -->
@@ -91,7 +119,7 @@
 	<div class="cities">
     <!--h1 统一用style属性替代align属性 align="center">This is my first page</h1-->
     <h1 style="text-align:center;">This is my first page</h1>
-		<!-- 为HTML行内元素设置类，在head中为行内元素定义CSS样式 && span如前所述，用来行内分块 -->
+	<!-- 为HTML行内元素设置类，在head中为行内元素定义CSS样式 && span如前所述，用来行内分块 -->
     <h6>This is my second <span class="rowred">IMPORTANT</span> page</h6>  
 	</div>
     <hr />
@@ -272,6 +300,7 @@
 	<div id="footer">
 		Copyright:abcd@efg.com
 	</div>
+	<hr />
 	
 	<!-- 响应式Web设计 RWD（Responsive Web Design）,使能够以可变的尺寸传递网页 除自己定义外还可以利用Bootstrap框架 -->
 	
