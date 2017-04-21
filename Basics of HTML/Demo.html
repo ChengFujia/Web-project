@@ -16,15 +16,16 @@
 </frameset>
 -->
 
-<!-- 如果一个框架有可见边框，用户可以拖动边框来改变他的大小：为避免这种情况，可加入noresize="noresize"-->
+<!-- 如果一个框架有可见边框，用户可以拖动边框来改变他的大小：为避免这种情况，可加入noresize="noresize"
 <frameset rows = "25%,75%">
 	<frame src = "html/Demo.html" noresize="noresize" />
 	<frameset cols = "50%,50%">
 		<frame src = "html/Demo.html" />
-		<!-- 跳到页面中指定的一个节，利用<a name="tips">进行标识 -->
+		<!-- 跳到页面中指定的一个节，利用<a name="tips">进行标识
 		<frame src = "html/Demo.html#tips" />
 	</frameset>
 </frameset>
+-->
 
 <!-- 演示左侧为导航栏，右侧为页面内容案板 
 <frameset cols="120,*">
@@ -92,9 +93,18 @@
 	<!-- link rel="stylesheet" type="text/css" href="/html/csstest1.css" -->
 </head>
 
-<!--body 统一用style属性替代bgcolor属性 bgcolor="green" Notes:可以利用background属性插入背景图片-->
+<!--body 统一用style属性替代bgcolor属性 bgcolor="green" Notes:可以利用background属性插入背景图片 -->
 <body style="background-color:white;">
     
+	<!-- 插入脚本，script标签用来定义客户端脚本，既可包含脚本语句，也可利用src属性指向外部脚本文件 -->
+	<!-- JavaScipt脚本 最常用于图片操作、表单验证、内容动态更新等 -->
+	<script type="text/javascript">
+	document.write("<h1>Hello World!</h1>")
+	</script>
+	<!-- noscript标签提供无法使用脚本时的替代内容，比如浏览器禁用脚本或者浏览器不支持客户端脚本 -->
+	<noscript>Sorry, your browser doesn't support JavaScript!</noscript>
+	<p>不支持JabaScipt的浏览器将显示noscript元素中的文本</p>
+	
 	<!-- 背景相关属性，但是在HTML4和XHTML中已被废弃 
 	三种不同方式，但都是将背景设置为黑色
 	<body bgcolor="#000000">
